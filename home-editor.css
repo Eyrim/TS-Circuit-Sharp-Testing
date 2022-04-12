@@ -1,0 +1,72 @@
+.activeSchematicArea {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("MissingTexture.png");
+    /* Preserve Aspect Ratio */
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.component {
+    position: absolute; /* Makes the component react to left:; and top:; */
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+/* https://css-tricks.com/perfect-full-page-background-image/ */
+
+.componentButtonContainer {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 20%;
+    height: 100%;
+}
+
+.componentButton {
+    z-index: 999;
+    position: absolute;
+}
+
+.componentButtonTable {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.componentButtonTableRow {
+    width: 100%;
+}
+
+.componentButtonTableData {
+    width: 50%;
+}
+
+.activeSchematicAreaTable {
+    position: absolute;
+    width: 80%;
+    height: 100%;
+    right: 0;
+    top: 0;
+    table-layout: fixed;
+    border-collapse: collapse;
+    white-space: nowrap;
+}
+
+.activeSchematicAreaRow {
+    width: 100% !important;
+    height: 20% !important; /* UPDATES TO ROW AND COLUMN COUNT MUST BE CALCULATED AND CHANGED HERE */
+    position: fixed;
+    right: 0;
+    top: 0;
+    table-layout: fixed;
+}
+
+.activeSchematicAreaColumn {
+    max-width: 20% !important;
+    max-height: 20% !important; /* UPDATES TO ROW AND COLUMN COUNT MUST BE CALCULATED AND CHANGED HERE */
+    position: fixed;
+    right: 0;
+    top: 0;
+    table-layout: fixed;
+}
