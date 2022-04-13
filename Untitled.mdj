@@ -385,7 +385,7 @@
 											"top": 557,
 											"width": 279,
 											"height": 13,
-											"text": "+isGhost: bool",
+											"text": "-isGhost: bool",
 											"horizontalAlignment": 0
 										}
 									],
@@ -805,6 +805,18 @@
 										"$ref": "AAAAAAGAGbJ1R+7o/II="
 									},
 									"subViews": [
+										{
+											"_type": "LabelView",
+											"_id": "AAAAAAGAHsPz8tDs1R0=",
+											"_parent": {
+												"$ref": "AAAAAAGAGbJ8Tu7svHI="
+											},
+											"font": "Arial;13;0",
+											"left": 658,
+											"top": 157,
+											"width": 87.4326171875,
+											"height": 13
+										},
 										{
 											"_type": "LabelView",
 											"_id": "AAAAAAGAGbJ8Tu7xXWM=",
@@ -1980,6 +1992,7 @@
 								"$ref": "AAAAAAGAGcCR2vMZdoI="
 							},
 							"name": "isGhost",
+							"visibility": "private",
 							"type": "bool"
 						}
 					],

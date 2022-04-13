@@ -71,6 +71,17 @@ export class Component {
         parentElement.appendChild(__classPrivateFieldGet(this, _Component_element, "f"));
     }
     /*
+    Moves a component from one parent to another based on ID
+    */
+    move(toID) {
+        if (__classPrivateFieldGet(this, _Component_parentID, "f") == undefined) {
+            throw new Error("this.parentID is undefined, cannot move element from undefined parent");
+        }
+        this.remove();
+        __classPrivateFieldSet(this, _Component_parentID, toID, "f");
+        this.place();
+    }
+    /*
     Configures the component
     */
     configure(parentID) {

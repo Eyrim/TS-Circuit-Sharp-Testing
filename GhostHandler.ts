@@ -1,5 +1,28 @@
 import { Grid } from './Grid.js';
+import { Component } from 'Component.js';
+import { Handling } from 'Handling.js';
 
-let grid: Grid = new Grid("activeSchematicAreaTable");
+/*
+When the window loads
+*/
+export class GhostHandler {
+    #schematicAreaTableID: string = "activeSchematicAreaTable";
 
-console.log(grid.grid);
+    main(): void {
+        //Attach handlers for component buttons
+        let handler: Handling = new Handling();
+        handler.attachComponentAreaHandlers();
+            // Onclick = Attach handlers for active schematic area
+        
+            //
+
+    }
+
+    static drawComponent(): void {
+
+    }
+
+    static removePlacedComponentsInCell(elementID: string): void {
+
+    }
+}

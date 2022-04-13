@@ -5,6 +5,7 @@ export class Component {
     // Redundant?
     #isPlaced: boolean = false;
     #isGhost: boolean = false;
+    
     #isConfigured: boolean = false;
     #element: HTMLImageElement;
     #parentID: string;
@@ -28,7 +29,7 @@ export class Component {
     }
 
     get element(): HTMLImageElement {
-        return this.#element;
+        return this.#element; 
     } set element(element: HTMLImageElement) {
         this.#element = element;
     }
@@ -55,6 +56,16 @@ export class Component {
         let parentElement: HTMLElement = document.getElementById(this.#parentID);
 
         parentElement.appendChild(this.#element);
+    }
+
+    /*
+    Moves a component from one parent to another based on ID 
+    */
+    move(toID: string) {
+        if (this.#parentID == undefined) { throw new Error("this.parentID is undefined, cannot move element from undefined parent"); }
+        this.remove();
+        this.#parentID = toID;
+        this.place();
     }
 
     /*
